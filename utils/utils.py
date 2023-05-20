@@ -14,7 +14,7 @@ def get_similar_items(text, n=10):
     with open('utils/stopwords.pkl', 'rb') as file:
         stopwords = pickle.load(file)
         file.close()
-    df = pd.read_csv('data/final_myntra3.csv',index_col=0)
+    df = pd.read_pickle('data/final_myntra3.pkl')
     text = ' '.join([x for x in text.split() if x not in stopwords])
     model = get_model()
     embedds = model.encode(text)
