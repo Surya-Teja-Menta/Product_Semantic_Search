@@ -43,6 +43,17 @@ The `get_similar_items()` function returns a JSON string containing the top N mo
 
 This module imports the `utils.py` module and calls the `get_similar_items()` function. The `get_similar_items()` function is called with the first argument from the command line as the `text` argument. The `get_similar_items()` function returns a JSON string containing the top 10 most similar items. The JSON string is then printed to the console.
 
+## Execution
+
+The Input should be passed as arguments as json payload.
+the input format:
+```
+{
+  "text": "text"
+  "n":"Number of top ranked list"
+}
+```
+
 ## requirements.txt
 
 This file contains a list of the Python packages that are required to run the code.
