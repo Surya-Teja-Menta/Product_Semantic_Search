@@ -1,14 +1,10 @@
-import streamlit as st
-import pickle,json
+import sys,pickle
 import pandas as pd
 from utils.utils import *
 
-st.title("Product Similarity Search")
-# Get the input text
-text = st.text_input("Enter a description of a clothing item:")
 
 # Get the top 5 similar items
-similar_items = get_similar_items(text, 10)
+similar_items = get_similar_items(sys.argv[1], 10)
 
-# Display the results
-st.table(similar_items)
+print(similar_items.reset_index(drop=True).to_json(orient='records', indent=4))
+
