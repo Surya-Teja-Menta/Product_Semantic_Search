@@ -17,6 +17,4 @@ RUN pip3 install -r requirements.txt
 
 COPY . .
 
-EXPOSE 8501
-
-ENTRYPOINT ["python", "run", "main.py"]
+ENTRYPOINT ["python", "main.py"]
